@@ -38,9 +38,9 @@ extensions.configure<com.android.build.gradle.LibraryExtension>("android") {
         unitTests.all {
             it.testLogging {
                 events("passed", "skipped", "failed", "standardOut", "standardError")
-                outputs.upToDateWhen { false }
                 showStandardStreams = true
             }
+            it.outputs.upToDateWhen { false }
         }
     }
 }
