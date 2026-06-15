@@ -1,22 +1,22 @@
 name: imin_vice_screen
 description: flutter plugin for iMin or smart devices with secondary screens
-version: 1.0.0
+version: 1.1.0
 homepage: https://github.com/iminsoftware/imin_vice_screen
 
 environment:
-  sdk: '>=3.0.6 <4.0.0'
-  flutter: ">=3.3.0"
+  sdk: ^3.5.0
+  flutter: ">=3.24.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  plugin_platform_interface: ^2.0.2
-  logger: ^1.1.0
+  plugin_platform_interface: ^2.1.8
+  logger: ^2.4.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^5.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
