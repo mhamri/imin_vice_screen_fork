@@ -20,7 +20,7 @@ android {
 
     defaultConfig {
         applicationId = "com.imin.vicescreen.imin_vice_screen_example"
-        minSdk = 21
+        minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
