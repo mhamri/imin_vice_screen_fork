@@ -1,9 +1,10 @@
 
 ## 1.1.0
 
-* changed: Modernized Android toolchain — AGP 8.7, Gradle 8.9, Kotlin DSL build
-  scripts, compileSdk 35, minSdk 21, Java 17, manifest `namespace`.
-* changed: Example app migrated to Flutter's declarative Gradle plugin loader.
+* changed: Modernized Android toolchain — Kotlin DSL build scripts, compileSdk 35,
+  minSdk 21, Java 17, manifest `namespace`; plugin module on AGP 8.7.
+* changed: Example app migrated to Flutter's declarative Gradle plugin loader and
+  the Flutter 3.44 toolchain floor — AGP 8.11.1, Gradle 8.14, built-in Kotlin.
 * fixed: Removed dead/invalid manifest permissions, including
   `MANAGE_EXTERNAL_STORAGE`, which blocked Google Play publication of apps using
   this plugin.
