@@ -76,7 +76,8 @@ class IminViceScreen {
   }
 
   Future<void> sendLCDBitmap(dynamic byte, {IminPictureStyle? pictureStyle}) {
-    return IminViceScreenPlatform.instance.sendLCDBitmap(byte, pictureStyle: pictureStyle);
+    return IminViceScreenPlatform.instance
+        .sendLCDBitmap(byte, pictureStyle: pictureStyle);
   }
 
   Future<void> setTextSize(int size) {

@@ -86,9 +86,11 @@ abstract class IminViceScreenPlatform extends PlatformInterface {
       {required String topText, required String bottomText}) {
     throw UnimplementedError('sendLCDDoubleString() has not been implemented.');
   }
+
   Future<void> sendLCDBitmap(dynamic byte, {IminPictureStyle? pictureStyle}) {
     throw UnimplementedError('sendLCDBitmap() has not been implemented.');
   }
+
   Future<void> setTextSize(int size) {
     throw UnimplementedError('setTextSize() has not been implemented.');
   }

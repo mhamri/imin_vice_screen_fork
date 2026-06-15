@@ -20,7 +20,7 @@ class MockIminViceScreenPlatform
           StreamController<MethodCall>? mainStreamController) =>
       Future.value();
   @override
-  Future<bool?> isSupportMultipleScreen() => Future.value();
+  Future<bool?> isSupportMultipleScreen() => Future.value(true);
   @override
   Future<bool?> checkOverlayPermission() => Future.value();
   @override
@@ -50,7 +50,8 @@ class MockIminViceScreenPlatform
           {required String topText, required String bottomText}) =>
       Future.value();
   @override
-  Future<void> sendLCDBitmap(dynamic byte, {IminPictureStyle? pictureStyle }) => Future.value();
+  Future<void> sendLCDBitmap(dynamic byte, {IminPictureStyle? pictureStyle}) =>
+      Future.value();
   @override
   Future<void> setTextSize(int size) => Future.value();
 }

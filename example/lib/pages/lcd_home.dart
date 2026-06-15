@@ -94,8 +94,8 @@ class _LCDHomeState extends State<LCDHome> {
               },
               child: const Text('Send Bitmap LCD Screen'),
             ),
-             const SizedBox(height: 30),
-              TextButton(
+            const SizedBox(height: 30),
+            TextButton(
               onPressed: () async {
                 await iminViceScreenPlugin.setTextSize(15);
               },

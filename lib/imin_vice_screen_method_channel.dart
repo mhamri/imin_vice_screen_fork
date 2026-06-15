@@ -138,6 +138,6 @@ class MethodChannelIminViceScreen extends IminViceScreenPlatform {
     Map<String, dynamic> arguments = <String, dynamic>{
       "size": size,
     };
-     await methodChannel.invokeMethod<void>('setTextSize', arguments);
+    await methodChannel.invokeMethod<void>('setTextSize', arguments);
   }
 }

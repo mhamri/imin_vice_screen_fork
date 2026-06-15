@@ -5,8 +5,8 @@ import 'package:imin_vice_screen/imin_vice_screen.dart';
 import 'package:video_player/video_player.dart';
 
 class SubHome extends StatefulWidget {
-  const SubHome({super.key});
   static const routeName = '/viceMain';
+  const SubHome({super.key});
   @override
   State<SubHome> createState() => _SubHomeState();
 }
@@ -15,34 +15,6 @@ class _SubHomeState extends State<SubHome> {
   final _iminViceScreenPlugin = IminViceScreen();
   String receiveData = 'null';
   late VideoPlayerController _controller;
-  @override
-  void initState() {
-    super.initState();
-    _controller = VideoPlayerController.networkUrl(Uri.parse(
-        "https://img.tukuppt.com/video_show/2405179/00/01/69/5b486eba157fd.mp4"))
-      ..initialize().then((value) {
-        setState(() {
-          _controller.play();
-          _controller.setLooping(true);
-        });
-      });
-    if (!mounted) return;
-    _iminViceScreenPlugin.viceStream.listen((event) {
-      debugPrint('viceStream: ${event.method}');
-        setState(() {
-          receiveData = event.arguments.toString();
-        });
-    });
-
-    Future.delayed(const Duration(seconds: 5), sendMsgToMainScreen);
-  }
-
-  void sendMsgToMainScreen() {
-    final randomData = Random().nextInt(100).toString();
-    _iminViceScreenPlugin
-        .sendMsgToMainScreen("text", params: {"num": randomData});
-  }
-
   @override
   Widget build(BuildContext context) {
     return receiveData != 'null'
@@ -75,5 +47,33 @@ class _SubHomeState extends State<SubHome> {
                     height: 100,
                     color: Colors.blue,
                   ));
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = VideoPlayerController.networkUrl(Uri.parse(
+        "https://img.tukuppt.com/video_show/2405179/00/01/69/5b486eba157fd.mp4"))
+      ..initialize().then((value) {
+        setState(() {
+          _controller.play();
+          _controller.setLooping(true);
+        });
+      });
+    if (!mounted) return;
+    _iminViceScreenPlugin.viceStream.listen((event) {
+      debugPrint('viceStream: ${event.method}');
+      setState(() {
+        receiveData = event.arguments.toString();
+      });
+    });
+
+    Future.delayed(const Duration(seconds: 5), sendMsgToMainScreen);
+  }
+
+  void sendMsgToMainScreen() {
+    final randomData = Random().nextInt(100).toString();
+    _iminViceScreenPlugin
+        .sendMsgToMainScreen("text", params: {"num": randomData});
   }
 }
