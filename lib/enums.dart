@@ -1,4 +1,4 @@
-library enums;
+library;
 
 // 打印机状态
 enum LCDCommand {

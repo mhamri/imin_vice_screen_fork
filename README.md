@@ -35,10 +35,12 @@ Use flutter to draw the main and secondary screens, and use the encapsulation ca
 ### 1. Distinguish the main screen from the secondary screen at the main entrance:
 
 ```dart
+import 'dart:ui' show PlatformDispatcher;
+
 void main() {
-  var defaultRouteName = window.defaultRouteName;
+  final defaultRouteName = PlatformDispatcher.instance.defaultRouteName;
   if ("viceMain" == defaultRouteName) {
-    viceScreenMain(); 
+    viceScreenMain();
   } else {
     defaultMain();
   }

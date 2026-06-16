@@ -48,7 +48,8 @@ class _MainHomeState extends State<MainHome> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          content: const Text('The secondary screen has been detected, and the secondary screen should be set as a persistent window to open the permission. Is it set?'),
+          content: const Text(
+              'The secondary screen has been detected, and the secondary screen should be set as a persistent window to open the permission. Is it set?'),
           actions: [
             TextButton(
               onPressed: () {
@@ -58,6 +59,7 @@ class _MainHomeState extends State<MainHome> {
             ),
             TextButton(
               onPressed: () {
+                final navigator = Navigator.of(context);
                 _iminViceScreenPlugin
                     .checkOverlayPermission()
                     .then((hasPermission) {
@@ -65,7 +67,7 @@ class _MainHomeState extends State<MainHome> {
                     _iminViceScreenPlugin.requestOverlayPermission();
                   } else {
                     _iminViceScreenPlugin.doubleScreenOpen();
-                    Navigator.of(context).pop();
+                    navigator.pop();
                   }
                 });
               },

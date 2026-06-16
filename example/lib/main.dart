@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'pages/lcd_home.dart';
 import 'pages/main_home.dart';
 import 'pages/sub_home.dart';
 
@@ -28,14 +27,14 @@ class _MyAppState extends State<MyApp> {
               settings: routeSettings,
               builder: (BuildContext context) {
                 // D4 使用的副屏
-               if (routeSettings.name == 'viceMain') {
-                 return const SubHome();
-               } else {
-                 return const MainHome();
-               } 
+                if (routeSettings.name == 'viceMain') {
+                  return const SubHome();
+                } else {
+                  return const MainHome();
+                }
 
-               // Falcon 1 使用的迷你副屏
-              // return const LCDHome();
+                // Falcon 1 使用的迷你副屏
+                // return const LCDHome();
               });
         });
   }
