@@ -1,6 +1,6 @@
 name: imin_vice_screen
 description: flutter plugin for iMin or smart devices with secondary screens
-version: 1.1.0
+version: 1.1.1
 homepage: https://github.com/iminsoftware/imin_vice_screen
 
 environment:

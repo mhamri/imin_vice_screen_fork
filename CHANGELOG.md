@@ -1,4 +1,10 @@
 
+## 1.1.1
+
+* fixed: Updated native library (libfree_image.so) to support 16KB page size
+  alignment for arm64-v8a, required by Android 15+ devices.
+* changed: Upgraded freeimagelibrary to v1.5 (NDK r28, minSdk 24).
+
 ## 1.1.0
 
 * changed: Modernized Android toolchain — Kotlin DSL build scripts, compileSdk 35,
